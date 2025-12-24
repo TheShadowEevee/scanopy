@@ -220,6 +220,9 @@ impl ServerConfig {
         if let Some(use_secure_session_cookies) = cli_args.use_secure_session_cookies {
             figment = figment.merge(("use_secure_session_cookies", use_secure_session_cookies));
         }
+        if let Some(disable_registration) = cli_args.use_secure_session_cookies {
+            figment = figment.merge(("disable_registration", disable_registration));
+        }
         if let Some(stripe_secret) = cli_args.stripe_secret {
             figment = figment.merge(("stripe_secret", stripe_secret));
         }
@@ -256,8 +259,6 @@ impl ServerConfig {
         if let Some(posthog_key) = cli_args.posthog_key {
             figment = figment.merge(("posthog_key", posthog_key));
         }
-
-        figment = figment.merge(("disable_registration", cli_args.disable_registration));
 
         let config: ServerConfig = figment
             .extract()
