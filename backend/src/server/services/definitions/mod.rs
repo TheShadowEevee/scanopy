@@ -267,6 +267,7 @@ pub mod zipkin;
 
 // Communication
 pub mod asterisk;
+pub mod atproto;
 pub mod bigbluebutton;
 pub mod freepbx;
 pub mod jitsi_meet;

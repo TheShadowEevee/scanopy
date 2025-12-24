@@ -59,10 +59,11 @@ pub enum ServiceCategory {
     ProjectManagement, // Task tracking, wikis, kanban boards
 
     // Communication
-    Messaging,    // Team chat (text-based)
-    Conferencing, // Video/audio meetings
-    Telephony,    // VoIP/PBX infrastructure
-    Email,        // Email servers
+    Messaging,     // Team chat (text-based)
+    Conferencing,  // Video/audio meetings
+    Telephony,     // VoIP/PBX infrastructure
+    Email,         // Email servers
+    SocialNetwork, // Social Networking
 
     // Content
     Publishing, // CMS, blogs, forums
@@ -124,6 +125,7 @@ impl EntityMetadataProvider for ServiceCategory {
             ServiceCategory::Conferencing => "Video",
             ServiceCategory::Telephony => "Phone",
             ServiceCategory::Email => "Mail",
+            ServiceCategory::SocialNetwork => "Users",
 
             // Content
             ServiceCategory::Publishing => "PenLine",
@@ -179,6 +181,7 @@ impl EntityMetadataProvider for ServiceCategory {
             ServiceCategory::Conferencing => "teal",
             ServiceCategory::Telephony => "orange",
             ServiceCategory::Email => "rose",
+            ServiceCategory::SocialNetwork => "blue",
 
             // Content
             ServiceCategory::Publishing => "violet",
